@@ -46,8 +46,9 @@ public class InsertionSort {
         long hours=ChronoUnit.HOURS.between(starttime,endtime);
         long minutes=ChronoUnit.MINUTES.between(starttime,endtime)%60;
         long seconds=ChronoUnit.SECONDS.between(starttime, endtime)%60;
-        System.out.println("The total time taken for sorting is:"+hours+" hours "+minutes
-        +" minutes "+seconds+" seconds ");
+       long milleseconds=ChronoUnit.MILLIS.between(starttime, endtime)%1000;
+       System.out.println("The total time taken for sorting is:"+hours+" hours "+minutes
+        +" minutes "+seconds+" seconds "+milleseconds+" milliseconds");
         for(int i=0;i<100000;i++){
              
             Writer2.write(A[i]+",");// Writting sorted numbers into the file
